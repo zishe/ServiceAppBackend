@@ -1,8 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.4.2'
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0.beta2'
 # Use postgresql as the database for Active Record
@@ -34,16 +32,27 @@ gem 'mini_magick', '~> 4.8'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+# gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'administrate'
 gem 'acts-as-taggable-on', '~> 5.0'
 gem 'aws-sdk-s3', require: false
-gem 'dotenv-rails', '~> 2.2'
+gem 'dotenv-rails'
+gem 'rack-cors'
+gem 'rack-attack'
+gem 'jsonapi-rails'
+gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'devise_token_auth'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  # gem 'pry-rails'
+  # gem 'pry-byebug'
+  # gem 'pry-stack_explorer'
+  # gem 'pry-doc'
   gem 'rspec-rails'
   gem 'factory_bot_rails'
   gem 'ffaker'

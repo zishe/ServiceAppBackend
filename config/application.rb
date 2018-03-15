@@ -1,4 +1,5 @@
 require_relative 'boot'
+require 'yaml'
 
 require "rails"
 # Pick the frameworks you want:
@@ -25,6 +26,8 @@ module RailsBackend
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # config.middleware.use Rack::Attack
 
     # Don't generate system test files.
     config.generators.system_tests = nil

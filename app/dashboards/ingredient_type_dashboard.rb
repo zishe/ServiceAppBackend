@@ -1,8 +1,6 @@
-# frozen_string_literal: true
+require "administrate/base_dashboard"
 
-require 'administrate/base_dashboard'
-
-class ProductDashboard < Administrate::BaseDashboard
+class IngredientTypeDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
   # a hash that describes the type of each of the model's fields.
   #
@@ -10,13 +8,12 @@ class ProductDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-    id: Field::Number,
-    name: Field::String,
-    description: Field::String,
-    image: ImageField,
-    ingredients: Field::HasMany.with_options(label: 'name'),
-    created_at: Field::DateTime,
-    updated_at: Field::DateTime
+      id: Field::Number,
+      name: Field::String,
+      description: Field::String,
+      ingredient: Field::BelongsTo.with_options(label: :name),
+      created_at: Field::DateTime,
+      updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -35,10 +32,9 @@ class ProductDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     id
-    image
     name
     description
-    ingredients
+    ingredient
     created_at
     updated_at
   ].freeze
@@ -47,13 +43,12 @@ class ProductDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
+    ingredient
     name
     description
-    image
-    ingredients
   ].freeze
 
-  # Overwrite this method to customize how products are displayed
+  # Overwrite this method to customize how ingredient types are displayed
   # across all pages of the admin dashboard.
   #
   def display_resource(item)

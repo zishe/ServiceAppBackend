@@ -13,6 +13,7 @@ class IngredientDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     description: Field::String,
+    ingredient_types: Field::HasMany.with_options(label: :name),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -35,6 +36,7 @@ class IngredientDashboard < Administrate::BaseDashboard
     id
     name
     description
+    ingredient_types
     created_at
     updated_at
   ].freeze
@@ -52,5 +54,9 @@ class IngredientDashboard < Administrate::BaseDashboard
   #
   def display_resource(product)
     product.try(:name) || "#{product.class} ##{product.id}"
+  end
+
+  def default_order
+    resources.order(name: :desc)
   end
 end

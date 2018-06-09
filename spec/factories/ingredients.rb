@@ -2,7 +2,7 @@
 #
 # Table name: ingredients
 #
-#  id          :integer          not null, primary key
+#  id          :bigint(8)        not null, primary key
 #  name        :string
 #  description :string
 #  created_at  :datetime         not null

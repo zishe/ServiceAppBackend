@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Api
   module V1
     class CategoriesController < BaseApiController
@@ -6,9 +7,16 @@ module Api
 
       # GET /categories
       def index
-        @categories = Category.all
+        @categories = Category.all.with_attached_image
 
-        render json: @categories.select(:id, :name, :description)
+        render json: @categories.map do |category|
+          # byebug
+          if category.image_attachment.nil?
+            category.as_json
+          else
+            category.as_json.merge(image: url_for(category.image))
+          end
+        end
       end
 
       # GET /categories/1
@@ -53,6 +61,5 @@ module Api
         params.fetch(:category, {}).permit(:name, :description)
       end
     end
-
   end
 end

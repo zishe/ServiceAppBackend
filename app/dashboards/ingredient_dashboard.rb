@@ -47,6 +47,7 @@ class IngredientDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = %i[
     name
     description
+    ingredient_types
   ].freeze
 
   # Overwrite this method to customize how products are displayed

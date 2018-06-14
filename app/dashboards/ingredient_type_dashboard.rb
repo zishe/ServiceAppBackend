@@ -1,4 +1,6 @@
-require "administrate/base_dashboard"
+# frozen_string_literal: true
+
+require 'administrate/base_dashboard'
 
 class IngredientTypeDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -8,12 +10,12 @@ class IngredientTypeDashboard < Administrate::BaseDashboard
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
-      id: Field::Number,
-      name: Field::String,
-      description: Field::String,
-      ingredient: Field::BelongsTo.with_options(label: :name),
-      created_at: Field::DateTime,
-      updated_at: Field::DateTime
+    id: Field::Number,
+    name: Field::String,
+    description: Field::String,
+    ingredient: Field::BelongsTo.with_options(label: :name),
+    created_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES

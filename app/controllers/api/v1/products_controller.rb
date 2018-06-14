@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 module Api
   module V1
     class ProductsController < BaseApiController
@@ -53,6 +54,5 @@ module Api
         params.fetch(:product, {}).permit(:name, :description)
       end
     end
-
   end
 end

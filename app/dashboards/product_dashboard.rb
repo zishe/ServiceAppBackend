@@ -14,7 +14,8 @@ class ProductDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::String,
     image: ImageField,
-    ingredients: Field::HasMany.with_options(label: 'name'),
+    ingredients: Field::HasMany.with_options(label: :name),
+    categories: Field::HasMany.with_options(label: :name),
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -27,7 +28,6 @@ class ProductDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
-    description
     created_at
   ].freeze
 
@@ -39,6 +39,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name
     description
     ingredients
+    categories
     created_at
     updated_at
   ].freeze
@@ -51,6 +52,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     image
     ingredients
+    categories
   ].freeze
 
   # Overwrite this method to customize how products are displayed

@@ -31,3 +31,10 @@
 
 en:
   hello: "Hello world"
+  administrate:
+    actions:
+      show: Show
+  activerecord:
+    models:
+      ingredient_type: Type
+      ingredient_types: Types

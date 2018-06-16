@@ -7,16 +7,9 @@ module Api
 
       # GET /categories
       def index
-        @categories = Category.all.with_attached_image
+        categories = Category.all.with_attached_image
 
-        render json: @categories.map do |category|
-          # byebug
-          if category.image_attachment.nil?
-            category.as_json
-          else
-            category.as_json.merge(image: url_for(category.image))
-          end
-        end
+        render json: with_images(categories)
       end
 
       # GET /categories/1

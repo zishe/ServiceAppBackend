@@ -9,7 +9,8 @@ module Api
       def index
         @products = Product.all
 
-        render json: @products.select(:id, :name, :description)
+        # .select(:id, :name, :description)
+        render json: with_images(@products)
       end
 
       # GET /products/1

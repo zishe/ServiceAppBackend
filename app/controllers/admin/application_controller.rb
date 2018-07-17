@@ -25,6 +25,13 @@ module Admin
       end
     end
 
+    helper_method :valid_action?
+    def valid_action?(name, resource = resource_name)
+      !!routes.detect do |controller, action|
+        controller == resource.to_s.pluralize && action == name.to_s
+      end
+    end
+
     # Override this value to specify the number of elements to display at a time
     # on index pages. Defaults to 20.
     # def records_per_page

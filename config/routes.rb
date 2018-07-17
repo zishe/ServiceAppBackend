@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     resources :categories
     resources :ingredients
     resources :ingredient_types
+    namespace :acts_as_taggable_on do
+      resources :tags
+      resources :taggings
+    end
 
     root to: 'products#index'
   end

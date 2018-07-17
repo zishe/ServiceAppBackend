@@ -14,6 +14,15 @@ class IngredientDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::String,
     ingredient_types: Field::HasMany.with_options(label: :name),
+    tags: Field::HasMany.with_options(class_name: "::ActsAsTaggableOn::Tag", label: :name),
+    # tags: Field::HasMany,
+    # tags: SelectField.with_options(
+    #   choices: ActsAsTaggableOn::Tag.all.map { |tag| tag.name }
+    # ),
+    # tag_list: SelectField.with_options(
+    #     choices: ActsAsTaggableOn::Tag.all.map { |tag| tag.name }
+    #   ),
+    tag_list: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime
   }.freeze
@@ -37,6 +46,7 @@ class IngredientDashboard < Administrate::BaseDashboard
     name
     description
     ingredient_types
+    tags
     created_at
     updated_at
   ].freeze
@@ -48,6 +58,7 @@ class IngredientDashboard < Administrate::BaseDashboard
     name
     description
     ingredient_types
+    tag_list
   ].freeze
 
   # Overwrite this method to customize how products are displayed

@@ -10,8 +10,21 @@
 #
 
 class Ingredient < ApplicationRecord
+  acts_as_taggable
+
   has_and_belongs_to_many :products
   has_many :ingredient_types
 
   validates :name, presence: true, uniqueness: true
+
+  def tag_list=(value)
+    self.tags = value.split(',').map { |name| ActsAsTaggableOn::Tag.find_or_initialize_by(name: name) }
+    self.save
+  end
+
+end
+
+class Tag < ActsAsTaggableOn::Tag
+end
+class Tagging < ActsAsTaggableOn::Tagging
 end

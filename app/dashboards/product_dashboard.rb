@@ -14,6 +14,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name: Field::String,
     description: Field::String,
     image: ImageField,
+    serving_weight: Field::Number,
     ingredients: Field::HasMany.with_options(label: :name),
     categories: Field::HasMany.with_options(label: :name),
     created_at: Field::DateTime,
@@ -28,6 +29,7 @@ class ProductDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = %i[
     id
     name
+    serving_weight
     created_at
   ].freeze
 
@@ -40,6 +42,7 @@ class ProductDashboard < Administrate::BaseDashboard
     description
     ingredients
     categories
+    serving_weight
     created_at
     updated_at
   ].freeze
@@ -51,6 +54,7 @@ class ProductDashboard < Administrate::BaseDashboard
     name
     description
     image
+    serving_weight
     ingredients
     categories
   ].freeze

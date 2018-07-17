@@ -35,7 +35,7 @@ gem 'mini_magick'
 # gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'administrate'
-gem 'acts-as-taggable-on', '~> 5.0'
+gem 'acts-as-taggable-on', '~> 6.0'
 gem 'aws-sdk-s3', require: false
 gem 'dotenv-rails'
 gem 'rack-cors'
@@ -45,8 +45,12 @@ gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'devise_token_auth'
+gem 'awrence'
 
 gem "google-cloud-storage", "~> 1.8", require: false
+
+gem 'administrate-field-select', '~> 2.0', require: 'administrate/field/select_basic'
+gem 'select2-rails'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

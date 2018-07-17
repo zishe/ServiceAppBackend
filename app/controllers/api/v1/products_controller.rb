@@ -3,19 +3,18 @@
 module Api
   module V1
     class ProductsController < BaseApiController
+      include ProductsHelper
       before_action :set_product, only: %i[show update destroy]
 
       # GET /products
       def index
         @products = Product.all
-
-        # .select(:id, :name, :description)
-        render json: with_images(@products)
+        render json: product_with_ingredients_and_image(@products).to_camelback_keys
       end
 
       # GET /products/1
       def show
-        render json: @product
+        render json: @product.to_json(include: :ingredients)
       end
 
       # POST /products
@@ -52,7 +51,7 @@ module Api
 
       # Only allow a trusted parameter "white list" through.
       def product_params
-        params.fetch(:product, {}).permit(:name, :description)
+        params.fetch(:product, {}).permit(:name, :description, :servingWeight)
       end
     end
   end

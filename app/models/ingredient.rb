@@ -18,7 +18,9 @@ class Ingredient < ApplicationRecord
   validates :name, presence: true, uniqueness: true
 
   def tag_list=(value)
-    self.tags = value.split(",").map { |name| ActsAsTaggableOn::Tag.find_or_initialize_by(name: name) }
+    self.tags = value.split(",").map do |name|
+      ActsAsTaggableOn::Tag.find_or_initialize_by(name: name)
+    end
     save
   end
 end

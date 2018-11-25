@@ -24,6 +24,7 @@ RSpec/DescribeClass:
 AllCops:
   Exclude:
     - bin/**/*
+    - db/seeds.rb
     - db/schema.rb
     - db/migrate/*.rb
     - node_modules/**/*

@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'auth', defaults: { format: 'json' }
+  if Rails.env.development?
+    mount GraphiQL::Rails::Engine, at: "/graphiql", graphql_path: "/graphql"
+  end
+  post "/graphql", to: "graphql#execute"
+
+  mount_devise_token_auth_for "User", at: "auth", defaults: { format: "json" }
 
   namespace :admin do
     resources :products
@@ -11,7 +16,7 @@ Rails.application.routes.draw do
       resources :taggings
     end
 
-    root to: 'products#index'
+    root to: "products#index"
   end
 
   namespace :api do

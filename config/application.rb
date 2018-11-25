@@ -1,5 +1,5 @@
-require_relative 'boot'
-require 'yaml'
+require_relative "boot"
+require "yaml"
 
 require "rails"
 # Pick the frameworks you want:

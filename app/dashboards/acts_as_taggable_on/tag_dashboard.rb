@@ -12,7 +12,7 @@ module ActsAsTaggableOn
       taggings: Field::HasMany.with_options(class_name: "::ActsAsTaggableOn::Tagging"),
       id: Field::Number,
       name: Field::String,
-      taggings_count: Field::Number,
+      taggings_count: Field::Number
     }.freeze
 
     # COLLECTION_ATTRIBUTES
@@ -20,29 +20,29 @@ module ActsAsTaggableOn
     #
     # By default, it's limited to four items to reduce clutter on index pages.
     # Feel free to add, remove, or rearrange items.
-    COLLECTION_ATTRIBUTES = [
-      :taggings,
-      :id,
-      :name,
-      :taggings_count,
+    COLLECTION_ATTRIBUTES = %i[
+      taggings
+      id
+      name
+      taggings_count
     ].freeze
 
     # SHOW_PAGE_ATTRIBUTES
     # an array of attributes that will be displayed on the model's show page.
-    SHOW_PAGE_ATTRIBUTES = [
-      :taggings,
-      :id,
-      :name,
-      :taggings_count,
+    SHOW_PAGE_ATTRIBUTES = %i[
+      taggings
+      id
+      name
+      taggings_count
     ].freeze
 
     # FORM_ATTRIBUTES
     # an array of attributes that will be displayed
     # on the model's form (`new` and `edit`) pages.
-    FORM_ATTRIBUTES = [
-      :taggings,
-      :name,
-      :taggings_count,
+    FORM_ATTRIBUTES = %i[
+      taggings
+      name
+      taggings_count
     ].freeze
 
     # Overwrite this method to customize how tags are displayed
@@ -54,6 +54,5 @@ module ActsAsTaggableOn
     def display_resource(tag)
       tag.name
     end
-
   end
 end

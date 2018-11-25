@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'administrate/base_dashboard'
+require "administrate/base_dashboard"
 
 class CategoryDashboard < Administrate::BaseDashboard
   # ATTRIBUTE_TYPES
@@ -16,7 +16,7 @@ class CategoryDashboard < Administrate::BaseDashboard
     image: ImageField,
     description: Field::String,
     created_at: Field::DateTime,
-    updated_at: Field::DateTime,
+    updated_at: Field::DateTime
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -24,33 +24,33 @@ class CategoryDashboard < Administrate::BaseDashboard
   #
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
-  COLLECTION_ATTRIBUTES = [
-    :id,
-    :name,
-    :description,
-    :products,
+  COLLECTION_ATTRIBUTES = %i[
+    id
+    name
+    description
+    products
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
-  SHOW_PAGE_ATTRIBUTES = [
-    :id,
-    :name,
-    :description,
-    :image,
-    :products,
-    :created_at,
-    :updated_at,
+  SHOW_PAGE_ATTRIBUTES = %i[
+    id
+    name
+    description
+    image
+    products
+    created_at
+    updated_at
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
-  FORM_ATTRIBUTES = [
-    :name,
-    :description,
-    :image,
-    :products,
+  FORM_ATTRIBUTES = %i[
+    name
+    description
+    image
+    products
   ].freeze
 
   # Overwrite this method to customize how categories are displayed

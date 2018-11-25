@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.2"
+gem "rails", "~> 5.2.1"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.18"
 # Use Puma as the app server
@@ -32,7 +32,7 @@ gem "mini_magick"
 # gem "capistrano-rails", group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-# gem "bootsnap", ">= 1.1.0", require: false
+gem "bootsnap", ">= 1.1.0", require: false
 
 gem "acts-as-taggable-on", "~> 6.0"
 gem "administrate"
@@ -50,7 +50,8 @@ gem "rack-cors"
 gem "administrate-field-select", "~> 2.0", require: "administrate/field/select_basic"
 gem "select2-rails"
 
-gem "graphql"
+gem "graphql", "~> 1.9.0.pre1"
+gem "serviceworker-rails"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
@@ -83,6 +84,7 @@ group :development do
 
   gem "brakeman", require: false
   gem "guard-rspec", require: false
+  gem "graphiql-rails"
 end
 
 group :test do
@@ -92,5 +94,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
-
-gem "graphiql-rails", group: :development

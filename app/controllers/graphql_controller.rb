@@ -9,7 +9,7 @@ class GraphqlController < ApplicationController
     }
     result = RailsBackendSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
     render json: result
-  rescue StandardError => e
+  rescue => e
     raise e unless Rails.env.development?
     handle_error_in_development e
   end
@@ -34,10 +34,10 @@ class GraphqlController < ApplicationController
     end
   end
 
-  def handle_error_in_development(event)
-    logger.error event.message
-    logger.error event.backtracevent.join("\n")
+  def handle_error_in_development(e)
+    logger.error e.message
+    logger.error e.backtrace.join("\n")
 
-    render json: { error: { message: event.message, backtrace: event.backtrace }, data: {} }, status: 500
+    render json: { error: { message: e.message, backtrace: e.backtrace }, data: {} }, status: 500
   end
 end

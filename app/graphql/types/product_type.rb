@@ -5,6 +5,7 @@ module Types
     field :id, ID, null: false
     field :name, String, null: false
     field :description, String, null: true
+    field :image, String, null: true
     field :created_at, GraphQL::Types::ISO8601DateTime, null: false
 
     field :categories, [Types::CategoryType], null: true

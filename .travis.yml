@@ -39,7 +39,6 @@ script:
 - "./cc-test-reporter before-build"
 - bundle exec rspec spec
 - "./cc-test-reporter format-coverage -t simplecov -o coverage/codeclimate.simplecov.json"
-- yarn test
 - "./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.lcov.json"
 - "./cc-test-reporter sum-coverage coverage/codeclimate.*.json"
 - "./cc-test-reporter upload-coverage"

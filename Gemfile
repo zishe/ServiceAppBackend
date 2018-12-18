@@ -53,6 +53,8 @@ gem "select2-rails"
 gem "graphql", "~> 1.9.0.pre1"
 gem "serviceworker-rails"
 
+gem "skylight"
+
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]

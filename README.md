@@ -11,8 +11,8 @@
   <a href="https://codeclimate.com/github/zishe/ServiceAppBackend/test_coverage">
     <img src="https://api.codeclimate.com/v1/badges/c55e5c2cb5d6429f08a6/test_coverage" />
   </a>
-  <a href="https://www.skylight.io/app/applications/1qcRvROveewj">
+  <!--<a href="https://www.skylight.io/app/applications/1qcRvROveewj">
     <img src="https://badges.skylight.io/status/1qcRvROveewj.svg?token=UPbMFoBaFaOLvWjAwT0QEWIsNZISoO8RPHJyHvvBWjs" />
-  </a>
+  </a>-->
 
-## Service Exchange
+## Service Exchange Platform

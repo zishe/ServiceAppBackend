@@ -85,6 +85,7 @@ group :development do
   gem "brakeman", require: false
   gem "guard-rspec", require: false
   gem "graphiql-rails"
+  gem "bundler-audit"
 end
 
 group :test do

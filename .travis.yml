@@ -5,6 +5,11 @@ cache:
   directories:
   - vendor/bundle
 
+env:
+  global:
+  - RAILS_ENV=test
+  - CC_TEST_REPORTER_ID=5a72894db998dc106dc70701bec98e2c411984b74d2b9de55873f4c99c36a7fe
+
 rvm:
   - 2.5.3
   - ruby-head
@@ -30,12 +35,14 @@ before_script:
 - cp config/database.yml.travis config/database.yml
 - psql -c 'create database travis_ci_test;' -U postgres
 
-env:
-  global:
-  - RAILS_ENV=test
-  - CC_TEST_REPORTER_ID=5a72894db998dc106dc70701bec98e2c411984b74d2b9de55873f4c99c36a7fe
-
-script: bundle exec rspec
-
-
+script:
+- bundle exec rake db:schema:load
+- "./cc-test-reporter before-build"
+- bundle exec rspec spec
+- "./cc-test-reporter format-coverage -t simplecov -o coverage/codeclimate.simplecov.json"
+- yarn test
+- "./cc-test-reporter format-coverage -t lcov -o coverage/codeclimate.lcov.json"
+- "./cc-test-reporter sum-coverage coverage/codeclimate.*.json"
+- "./cc-test-reporter upload-coverage"
+- bundle exec bundle-audit update && bundle exec bundle-audit check
 

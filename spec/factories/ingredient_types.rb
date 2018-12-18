@@ -12,7 +12,7 @@
 
 FactoryBot.define do
   factory :ingredient_type do
-    name { "MyString" }
-    description { "MyString" }
+    name { Faker::Name.unique.name }
+    description { Faker::Lorem.sentence(3) }
   end
 end

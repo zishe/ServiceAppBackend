@@ -11,7 +11,7 @@
 
 FactoryBot.define do
   factory :category do
-    name { "MyString" }
-    description { "MyString" }
+    name { Faker::Name.unique.name }
+    description { Faker::Lorem.sentence(3) }
   end
 end

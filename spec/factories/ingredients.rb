@@ -11,7 +11,7 @@
 
 FactoryBot.define do
   factory :ingredient do
-    name { "MyString" }
-    description { "MyString" }
+    name { Faker::Name.unique.name }
+    description { Faker::Lorem.sentence(3) }
   end
 end

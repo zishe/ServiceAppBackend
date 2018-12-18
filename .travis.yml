@@ -1,0 +1,15 @@
+dist: trusty
+sudo: false
+language: ruby
+cache: bundler
+
+rvm:
+  - 2.5.1
+  - 2.5.3
+  - ruby-head
+
+before_install:
+  - gem install bundler
+  - gem update --system
+
+script: bundle exec rspec

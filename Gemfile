@@ -58,23 +58,33 @@ gem "skylight"
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "pry-byebug", "~> 3.6"
   gem "capybara"
+
+  gem "derailed", "~> 0.1"
   gem "database_cleaner"
   gem "factory_bot_rails"
-  gem "ffaker"
+  gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
+  gem "fix-db-schema-conflicts", github: "thepracticaldev/fix-db-schema-conflicts", branch: "master"
   gem "rspec-rails"
   gem "rubocop", "~> 0.59", require: false
   gem "rubocop-rspec", "~> 1.29"
   gem "spring"
+  gem "spring-commands-rspec", "~> 1.0"
   gem "timecop"
   gem "webmock"
 
   gem "active_record_query_trace"
-  gem "bullet"
   gem "json_matchers"
 
   gem "annotate", require: false
   gem "letter_opener"
+
+  gem "memory_profiler", "~> 0.9"
+  gem "parallel_tests", "~> 2.27"
+
+  gem "rspec-retry", "~> 0.6"
+
 end
 
 group :development do
@@ -84,9 +94,21 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring-watcher-listen", "~> 2.0.0"
 
-  gem "brakeman", require: false
-  gem "guard-rspec", require: false
+  gem "guard", "~> 2.15", require: false
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "guard-rspec", "~> 4.7", require: false
   gem "graphiql-rails"
+
+  gem "better_errors", "~> 2.5"
+  gem "binding_of_caller", "~> 0.8"
+  gem "brakeman", "~> 4.3", require: false
+  gem "bullet", "~> 5.9"
+  gem "derailed_benchmarks", "~> 1.3"
+  gem "guard", "~> 2.15", require: false
+  gem "guard-livereload", "~> 2.5", require: false
+  gem "guard-rspec", "~> 4.7", require: false
+  gem "rb-fsevent", "~> 0.10", require: false
+
   gem "bundler-audit"
 end
 
@@ -94,6 +116,7 @@ group :test do
   gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "simplecov-console", require: false
+
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,5 +1,6 @@
 SimpleCov.start "rails" do
   add_filter "/spec/"
+  add_filter "/graphql/"
   add_filter "/dashboards/"
   add_filter "/app/controllers/admin/"
   add_filter "/app/controllers/internal/"

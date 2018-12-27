@@ -1,6 +1,6 @@
 module Types
   class QueryType < Types::BaseObject
-    include ApiHelper
+    include DataHelper
     include ProductsHelper
 
     graphql_name "RootQuery"

@@ -1,6 +1,6 @@
 require 'ostruct'
 
-module ApiHelper
+module DataHelper
   def with_images(collection)
     collection.map do |entity|
       # byebug

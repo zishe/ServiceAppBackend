@@ -116,6 +116,7 @@ group :test do
   gem "shoulda-matchers"
   gem "simplecov", require: false
   gem "simplecov-console", require: false
+  gem "simplecov-lcov", require: false
 
 end
 

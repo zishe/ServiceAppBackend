@@ -2,7 +2,7 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.2.1"
+gem "rails", "~> 5.2"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.18"
 # Use Puma as the app server
@@ -104,11 +104,7 @@ group :development do
   gem "brakeman", "~> 4.3", require: false
   gem "bullet", "~> 5.9"
   gem "derailed_benchmarks", "~> 1.3"
-  gem "guard", "~> 2.15", require: false
-  gem "guard-livereload", "~> 2.5", require: false
-  gem "guard-rspec", "~> 4.7", require: false
   gem "rb-fsevent", "~> 0.10", require: false
-
   gem "bundler-audit"
 end
 

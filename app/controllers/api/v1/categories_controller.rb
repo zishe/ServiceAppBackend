@@ -8,8 +8,8 @@ module Api
       # GET /categories
       def index
         categories = Category.all.with_attached_image
-
-        render json: with_images(categories).to_camelback_keys
+        render json: categories.as_json
+        # with_images(categories).to_camelback_keys
       end
 
       # GET /categories/1

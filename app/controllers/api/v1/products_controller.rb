@@ -9,7 +9,12 @@ module Api
       # GET /products
       def index
         @products = Product.all
-        render json: product_with_ingredients_and_image(@products).to_camelback_keys
+        # @products.each do |product|
+        #   product.image_url = url_for(product.image)
+        #   product.save
+        # end
+        render json: @products.to_json(include: { ingredients: { include: %i[ingredient_types tags] } })
+        # product_with_ingredients_and_image(@products).to_camelback_keys
       end
 
       # GET /products/1

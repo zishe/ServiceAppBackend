@@ -1,0 +1,10 @@
+version: 2
+plugins:
+  rubocop:
+    enabled: true
+    checks:
+      Rubocop/Style/ClassAndModuleChildren:
+        enabled: false
+exclude_paths:
+- spec/
+- vendor/

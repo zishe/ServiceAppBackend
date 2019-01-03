@@ -8,7 +8,7 @@ cache:
 env:
   global:
   - RAILS_ENV=test
-  - CC_TEST_REPORTER_ID=5a72894db998dc106dc70701bec98e2c411984b74d2b9de55873f4c99c36a7fe
+  - CC_TEST_REPORTER_ID=2862a5400e7f0cccd981d0c84f5b6518f1b7ebd0bf64a63ee0afd01abd987ed1
 
 rvm:
   - 2.5.3

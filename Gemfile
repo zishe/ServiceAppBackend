@@ -64,7 +64,7 @@ group :development, :test do
   gem "derailed", "~> 0.1"
   gem "database_cleaner"
   gem "factory_bot_rails"
-  gem "faker", git: "https://github.com/stympy/faker.git", branch: "master"
+  gem "faker", github: "stympy/faker", branch: "master"
   gem "fix-db-schema-conflicts", github: "thepracticaldev/fix-db-schema-conflicts", branch: "master"
   gem "rspec-rails"
   gem "rubocop", "~> 0.59", require: false

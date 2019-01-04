@@ -1,19 +1,24 @@
-FROM ruby:2.6.0-alpine
-RUN apk add --no-cache --update build-base \
-                                linux-headers \
-                                git \
-                                postgresql-dev \
-                                nodejs \
-                                tzdata
+FROM ruby:2.6.0
 
-ENV APP_PATH /usr/src/app
+# Make nodejs and yarn as dependencies
+RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
 
-# Different layer for gems installation
-WORKDIR $APP_PATH
-ADD Gemfile $APP_PATH
-ADD Gemfile.lock $APP_PATH
-RUN bundle install --jobs `expr $(cat /proc/cpuinfo | grep -c "cpu cores") - 1` --retry 3
+# Install dependencies and perform clean-up
+RUN apt-get update -qq && apt-get install -y \
+   build-essential \
+   nodejs \
+   yarn \
+ && apt-get -q clean \
+ && rm -rf /var/lib/apt/lists
 
-# Copy the application into the container
-COPY . APP_PATH
-EXPOSE 3000
+WORKDIR /usr/src/app
+ENV RAILS_ENV development
+
+# Installing Ruby dependencies
+COPY Gemfile* ./
+RUN gem install bundler
+RUN bundle install --jobs 20 --retry 5
+
+ENTRYPOINT ["bundle", "exec"]
+
+CMD ["rails", "server", "-b", "0.0.0.0", "-p", "3000"]

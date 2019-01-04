@@ -84,7 +84,6 @@ group :development, :test do
   gem "parallel_tests", "~> 2.27"
 
   gem "rspec-retry", "~> 0.6"
-
 end
 
 group :development do
@@ -113,7 +112,6 @@ group :test do
   gem "simplecov", require: false
   gem "simplecov-console", require: false
   gem "simplecov-lcov", require: false
-
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

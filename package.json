@@ -1,5 +1,6 @@
 {
   "name": "youdo-admin",
+  "version": "0.0.3",
   "private": true,
   "scripts": {
     "precommit": "lint-staged"

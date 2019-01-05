@@ -44,8 +44,8 @@ jobs:
       - run:
           name: Database Setup
           command: |
-            bundle exec RAILS_ENV=test rake db:create
-            bundle exec RAILS_ENV=test rake db:migrate
+            bundle exec rake db:create
+            bundle exec rake db:migrate
 
       - run:
           name: Parallel RSpec

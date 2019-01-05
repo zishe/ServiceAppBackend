@@ -11,7 +11,7 @@ RUN apt-get update -qq && apt-get install -y \
  && apt-get -q clean \
  && rm -rf /var/lib/apt/lists
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/admin
 ENV RAILS_ENV development
 
 # Installing Ruby dependencies

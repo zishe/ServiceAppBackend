@@ -5,4 +5,28 @@
 [![](https://api.codeclimate.com/v1/badges/321a5074242c2cff9a5a/test_coverage)](https://codeclimate.com/github/zishe/anydo-admin/test_coverage)
 [![security](https://hakiri.io/github/zishe/anydo-admin/master.svg)](https://hakiri.io/github/zishe/anydo-admin/master)
 
-## Service Exchange Platform
+# AnyDo Admin
+
+## Installation
+
+```
+gem install bundler
+```
+
+```
+bundle install
+```
+
+```
+rails db:create
+```
+
+```
+rails db:migrate
+```
+
+#### Run
+
+```
+rails s
+```

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: 5c369a379326211bd281c671598e203f5be5a0d0
+  revision: f496864cd0ec020ffebbee87fbdc313574bc3876
   branch: master
   specs:
     faker (1.9.1)
@@ -61,7 +61,7 @@ GEM
       tzinfo (~> 1.1)
     acts-as-taggable-on (6.0.0)
       activerecord (~> 5.0)
-    addressable (2.5.2)
+    addressable (2.6.0)
       public_suffix (>= 2.0.2, < 4.0)
     administrate (0.11.0)
       actionpack (>= 4.2, < 6.0)
@@ -82,12 +82,12 @@ GEM
     ansi (1.5.0)
     arel (9.0.0)
     ast (2.4.0)
-    autoprefixer-rails (9.4.5)
+    autoprefixer-rails (9.4.6)
       execjs
     awrence (1.1.0)
     aws-eventstream (1.0.1)
-    aws-partitions (1.131.0)
-    aws-sdk-core (3.45.0)
+    aws-partitions (1.133.0)
+    aws-sdk-core (3.46.0)
       aws-eventstream (~> 1.0)
       aws-partitions (~> 1.0)
       aws-sigv4 (~> 1.0)
@@ -111,13 +111,13 @@ GEM
       debug_inspector (>= 0.0.1)
     bootsnap (1.3.2)
       msgpack (~> 1.0)
-    brakeman (4.3.1)
+    brakeman (4.4.0)
     builder (3.2.3)
     bullet (5.9.0)
       activesupport (>= 3.0.0)
       uniform_notifier (~> 1.11)
-    bundler-audit (0.6.0)
-      bundler (~> 1.2)
+    bundler-audit (0.6.1)
+      bundler (>= 1.2.0, < 3)
       thor (~> 0.18)
     byebug (10.0.2)
     capybara (3.12.0)
@@ -187,10 +187,10 @@ GEM
     get_process_mem (0.2.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
-    graphiql-rails (1.5.0)
+    graphiql-rails (1.6.0)
       railties
       sprockets-rails
-    graphql (1.9.0.pre1)
+    graphql (1.9.0.pre2)
     guard (2.15.0)
       formatador (>= 0.2.4)
       listen (>= 2.7, < 4.0)
@@ -215,7 +215,7 @@ GEM
     heapy (0.1.4)
     hirb (0.7.3)
     http_parser.rb (0.6.0)
-    i18n (1.5.2)
+    i18n (1.5.3)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.2)
     jbuilder (2.8.0)
@@ -305,7 +305,7 @@ GEM
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
     orm_adapter (0.5.0)
-    parallel (1.12.1)
+    parallel (1.13.0)
     parallel_tests (2.27.1)
       parallel
     parser (2.6.0.0)
@@ -355,11 +355,12 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    rb-readline (0.5.5)
     redis (4.1.0)
     regexp_parser (1.3.0)
-    responders (2.4.0)
-      actionpack (>= 4.2.0, < 5.3)
-      railties (>= 4.2.0, < 5.3)
+    responders (2.4.1)
+      actionpack (>= 4.2.0, < 6.0)
+      railties (>= 4.2.0, < 6.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -372,7 +373,7 @@ GEM
     rspec-mocks (3.8.0)
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.8.0)
-    rspec-rails (3.8.1)
+    rspec-rails (3.8.2)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       railties (>= 3.0)
@@ -383,7 +384,7 @@ GEM
     rspec-retry (0.6.1)
       rspec-core (> 3.3)
     rspec-support (3.8.0)
-    rubocop (0.63.0)
+    rubocop (0.63.1)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.5, != 2.5.1.1)
@@ -525,6 +526,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 5.2)
   rb-fsevent (~> 0.10)
+  rb-readline
   redis
   rspec-rails
   rspec-retry (~> 0.6)

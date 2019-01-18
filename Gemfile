@@ -105,6 +105,7 @@ group :development do
   gem "derailed_benchmarks", "~> 1.3"
   gem "rb-fsevent", "~> 0.10", require: false
   gem "bundler-audit"
+  gem "rb-readline"
 end
 
 group :test do

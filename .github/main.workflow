@@ -5,7 +5,7 @@ workflow "Build" {
 
 action "dc up" {
   uses = "actions/docker/cli@c08a5fc9e0286844156fefff2c141072048141f6"
-  runs = "docker-compose build"
+  runs = "docker build -t youdo-admin"
   env = {
     S3_BUCKET_NAME = "exchange-service-app"
     AWS_ACCESS_KEY_ID = "AKIAIIVPEUZT4GHSAYHA"

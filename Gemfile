@@ -35,7 +35,7 @@ gem "mini_magick"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "acts-as-taggable-on", "~> 6.0"
-gem "administrate"
+gem "administrate", ">= 0.11.0"
 gem "awrence"
 gem "aws-sdk-s3", require: false
 gem "devise"
@@ -47,7 +47,7 @@ gem "omniauth-facebook"
 gem "rack-attack"
 gem "rack-cors"
 
-gem "administrate-field-select", "~> 2.0", require: "administrate/field/select_basic"
+gem "administrate-field-select", "2.1.0"
 gem "select2-rails"
 
 gem "graphql", "~> 1.9.0.pre1"

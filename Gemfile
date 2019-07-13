@@ -26,7 +26,7 @@ gem "redis"
 gem "bcrypt"
 
 # Use ActiveStorage variant
-gem "mini_magick"
+gem "mini_magick", ">= 4.9.4"
 
 # Use Capistrano for deployment
 # gem "capistrano-rails", group: :development

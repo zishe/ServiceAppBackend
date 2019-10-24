@@ -2,20 +2,20 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.2"
+gem "rails", "~> 5.2", ">= 5.2.2"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.18"
 # Use Puma as the app server
 gem "puma"
 # Use SCSS for stylesheets
-gem "sass-rails"
+gem "sass-rails", ">= 5.0.7"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem "mini_racer", platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem "coffee-rails"
+gem "coffee-rails", ">= 4.2.2"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,23 +35,23 @@ gem "mini_magick"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "acts-as-taggable-on", "~> 6.0"
-gem "administrate"
+gem "administrate", ">= 0.11.0"
 gem "awrence"
 gem "aws-sdk-s3", require: false
-gem "devise"
-gem "devise_token_auth"
-gem "dotenv-rails"
+gem "devise", ">= 4.5.0"
+gem "devise_token_auth", ">= 1.0.0"
+gem "dotenv-rails", ">= 2.6.0"
 gem "jsonapi-rails"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "rack-attack"
 gem "rack-cors"
 
-gem "administrate-field-select", "~> 2.0", require: "administrate/field/select_basic"
+gem "administrate-field-select", "2.1.0"
 gem "select2-rails"
 
 gem "graphql", "~> 1.9.0.pre1"
-gem "serviceworker-rails"
+gem "serviceworker-rails", ">= 0.5.5"
 
 gem "skylight"
 
@@ -63,10 +63,10 @@ group :development, :test do
 
   gem "derailed", "~> 0.1"
   gem "database_cleaner"
-  gem "factory_bot_rails"
+  gem "factory_bot_rails", ">= 4.11.1"
   gem "faker", github: "stympy/faker", branch: "master"
   gem "fix-db-schema-conflicts", github: "thepracticaldev/fix-db-schema-conflicts", branch: "master"
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 3.8.2"
   gem "rubocop", "~> 0.59", require: false
   gem "rubocop-rspec", "~> 1.29"
   gem "spring"
@@ -89,14 +89,14 @@ end
 group :development do
   # Access an interactive console on exception pages or by calling "console" anywhere in the code.
   gem "listen", ">= 3.0.5", "< 3.2"
-  gem "web-console"
+  gem "web-console", ">= 3.7.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "spring-watcher-listen", "~> 2.0.0"
 
   gem "guard", "~> 2.15", require: false
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rspec", "~> 4.7", require: false
-  gem "graphiql-rails"
+  gem "graphiql-rails", ">= 1.6.0"
 
   gem "better_errors", "~> 2.5"
   gem "binding_of_caller", "~> 0.8"

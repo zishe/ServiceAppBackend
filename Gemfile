@@ -45,7 +45,7 @@ gem "jsonapi-rails"
 gem "omniauth"
 gem "omniauth-facebook"
 gem "rack-attack"
-gem "rack-cors"
+gem "rack-cors", ">= 1.0.5"
 
 gem "administrate-field-select", "~> 2.0", require: "administrate/field/select_basic"
 gem "select2-rails"

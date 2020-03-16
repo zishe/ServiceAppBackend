@@ -35,7 +35,7 @@ gem "mini_magick"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "acts-as-taggable-on", "~> 6.0"
-gem "administrate", ">= 0.11.0"
+gem "administrate", ">= 0.13.0"
 gem "awrence"
 gem "aws-sdk-s3", require: false
 gem "devise", ">= 4.5.0"

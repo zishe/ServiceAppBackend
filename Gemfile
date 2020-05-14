@@ -2,20 +2,20 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.2", ">= 5.2.2"
+gem "rails", "~> 5.2", ">= 5.2.3"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.18"
 # Use Puma as the app server
 gem "puma"
 # Use SCSS for stylesheets
-gem "sass-rails", ">= 5.0.7"
+gem "sass-rails", ">= 6.0.0"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem "mini_racer", platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", ">= 4.2.2"
+gem "coffee-rails", ">= 5.0.0"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -35,23 +35,23 @@ gem "mini_magick"
 gem "bootsnap", ">= 1.1.0", require: false
 
 gem "acts-as-taggable-on", "~> 6.0"
-gem "administrate", ">= 0.11.0"
+gem "administrate", ">= 0.12.0"
 gem "awrence"
 gem "aws-sdk-s3", require: false
-gem "devise", ">= 4.5.0"
-gem "devise_token_auth", ">= 1.0.0"
-gem "dotenv-rails", ">= 2.6.0"
+gem "devise", ">= 4.7.1"
+gem "devise_token_auth", ">= 1.1.3"
+gem "dotenv-rails", ">= 2.7.5"
 gem "jsonapi-rails"
-gem "omniauth"
-gem "omniauth-facebook"
-gem "rack-attack"
+gem "omniauth", ">= 1.9.0"
+gem "omniauth-facebook", ">= 5.0.0"
+gem "rack-attack", ">= 5.4.2"
 gem "rack-cors"
 
 gem "administrate-field-select", "2.1.0"
 gem "select2-rails"
 
 gem "graphql", "~> 1.9.0.pre1"
-gem "serviceworker-rails", ">= 0.5.5"
+gem "serviceworker-rails", ">= 0.6.0"
 
 gem "skylight"
 
@@ -59,14 +59,14 @@ group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
   gem "pry-byebug", "~> 3.6"
-  gem "capybara", ">= 3.12.0"
+  gem "capybara", ">= 3.29.0"
 
-  gem "derailed", "~> 0.1"
+  gem "derailed", "~> 0.1", ">= 0.1.0"
   gem "database_cleaner"
-  gem "factory_bot_rails", ">= 4.11.1"
+  gem "factory_bot_rails", ">= 5.1.1"
   gem "faker", github: "stympy/faker", branch: "master"
   gem "fix-db-schema-conflicts", github: "thepracticaldev/fix-db-schema-conflicts", branch: "master"
-  gem "rspec-rails", ">= 3.8.2"
+  gem "rspec-rails", ">= 3.8.3"
   gem "rubocop", "~> 0.59", require: false
   gem "rubocop-rspec", "~> 1.29"
   gem "spring"
@@ -96,13 +96,13 @@ group :development do
   gem "guard", "~> 2.15", require: false
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rspec", "~> 4.7", require: false
-  gem "graphiql-rails", ">= 1.6.0"
+  gem "graphiql-rails", ">= 1.7.0"
 
-  gem "better_errors", "~> 2.5"
+  gem "better_errors", "~> 2.5", ">= 2.5.0"
   gem "binding_of_caller", "~> 0.8"
   gem "brakeman", "~> 4.3", require: false
   gem "bullet", "~> 5.9"
-  gem "derailed_benchmarks", "~> 1.3"
+  gem "derailed_benchmarks", "~> 1.3", ">= 1.3.5"
   gem "rb-fsevent", "~> 0.10", require: false
   gem "bundler-audit"
   gem "rb-readline"

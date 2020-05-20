@@ -2,24 +2,24 @@ source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails"
-gem "rails", "~> 5.2", ">= 5.2.2"
+gem "rails", "~> 5.2", ">= 5.2.4.3"
 # Use postgresql as the database for Active Record
 gem "pg", "~> 0.18"
 # Use Puma as the app server
 gem "puma"
 # Use SCSS for stylesheets
-gem "sass-rails", ">= 5.0.7"
+gem "sass-rails", ">= 6.0.0"
 # Use Uglifier as compressor for JavaScript assets
 gem "uglifier"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem "mini_racer", platforms: :ruby
 
 # Use CoffeeScript for .coffee assets and views
-gem "coffee-rails", ">= 4.2.2"
+gem "coffee-rails", ">= 5.0.0"
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem "turbolinks"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem "jbuilder"
+gem "jbuilder", ">= 2.8.0"
 # Use Redis adapter to run Action Cable in production
 gem "redis"
 # Use ActiveModel has_secure_password
@@ -34,13 +34,13 @@ gem "mini_magick"
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", ">= 1.1.0", require: false
 
-gem "acts-as-taggable-on", "~> 6.0"
-gem "administrate", ">= 0.11.0"
+gem "acts-as-taggable-on", "~> 6.0", ">= 6.0.0"
+gem "administrate", ">= 0.12.0"
 gem "awrence"
 gem "aws-sdk-s3", require: false
-gem "devise", ">= 4.5.0"
-gem "devise_token_auth", ">= 1.0.0"
-gem "dotenv-rails", ">= 2.6.0"
+gem "devise", ">= 4.7.1"
+gem "devise_token_auth", ">= 1.1.3"
+gem "dotenv-rails", ">= 2.7.5"
 gem "jsonapi-rails"
 gem "omniauth"
 gem "omniauth-facebook"
@@ -51,9 +51,9 @@ gem "administrate-field-select", "2.1.0"
 gem "select2-rails"
 
 gem "graphql", "~> 1.9.0.pre1"
-gem "serviceworker-rails", ">= 0.5.5"
+gem "serviceworker-rails", ">= 0.6.0"
 
-gem "skylight"
+gem "skylight", ">= 3.1.2"
 
 group :development, :test do
   # Call "byebug" anywhere in the code to stop execution and get a debugger console
@@ -63,21 +63,21 @@ group :development, :test do
 
   gem "derailed", "~> 0.1"
   gem "database_cleaner"
-  gem "factory_bot_rails", ">= 4.11.1"
+  gem "factory_bot_rails", ">= 5.1.1"
   gem "faker", github: "stympy/faker", branch: "master"
   gem "fix-db-schema-conflicts", github: "thepracticaldev/fix-db-schema-conflicts", branch: "master"
-  gem "rspec-rails", ">= 3.8.2"
+  gem "rspec-rails", ">= 3.8.3"
   gem "rubocop", "~> 0.59", require: false
   gem "rubocop-rspec", "~> 1.29"
-  gem "spring"
-  gem "spring-commands-rspec", "~> 1.0"
+  gem "spring", ">= 2.0.2"
+  gem "spring-commands-rspec", "~> 1.0", ">= 1.0.4"
   gem "timecop"
   gem "webmock"
 
   gem "active_record_query_trace"
   gem "json_matchers"
 
-  gem "annotate", require: false
+  gem "annotate", ">= 2.7.4", require: false
   gem "letter_opener"
 
   gem "memory_profiler", "~> 0.9"
@@ -91,17 +91,17 @@ group :development do
   gem "listen", ">= 3.0.5", "< 3.2"
   gem "web-console", ">= 3.7.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem "spring-watcher-listen", "~> 2.0.0"
+  gem "spring-watcher-listen", "~> 2.0.1"
 
   gem "guard", "~> 2.15", require: false
   gem "guard-livereload", "~> 2.5", require: false
   gem "guard-rspec", "~> 4.7", require: false
-  gem "graphiql-rails", ">= 1.6.0"
+  gem "graphiql-rails", ">= 1.7.0"
 
   gem "better_errors", "~> 2.5"
   gem "binding_of_caller", "~> 0.8"
   gem "brakeman", "~> 4.3", require: false
-  gem "bullet", "~> 5.9"
+  gem "bullet", "~> 5.9", ">= 5.9.0"
   gem "derailed_benchmarks", "~> 1.3"
   gem "rb-fsevent", "~> 0.10", require: false
   gem "bundler-audit"
@@ -109,7 +109,7 @@ group :development do
 end
 
 group :test do
-  gem "shoulda-matchers"
+  gem "shoulda-matchers", ">= 3.1.2"
   gem "simplecov", require: false
   gem "simplecov-console", require: false
   gem "simplecov-lcov", require: false
